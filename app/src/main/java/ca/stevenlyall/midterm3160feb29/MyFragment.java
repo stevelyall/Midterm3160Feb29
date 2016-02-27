@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 public class MyFragment extends Fragment {
 
+	private final String TAG = "MainActivity";
+
 	TextView fragmentTextView;
 	ImageView fragmentImageView;
 
