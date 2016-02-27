@@ -1,7 +1,6 @@
 package ca.stevenlyall.midterm3160feb29;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,19 +15,16 @@ public class MyFragment extends Fragment {
 	TextView fragmentTextView;
 	ImageView fragmentImageView;
 
-	// TODO: Rename parameter arguments, choose names that match
-	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-	private static final String ARG_PARAM1 = "param1";
-	private static final String ARG_PARAM2 = "param2";
-
-	// TODO: Rename and change types of parameters
-	private String mParam1;
-	private String mParam2;
-
 	private OnFragmentInteractionListener mListener;
 
 
 	public MyFragment() {
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		//outState.putString();
 	}
 
 	@Override
@@ -49,12 +45,12 @@ public class MyFragment extends Fragment {
 
 		fragmentImageView = (ImageView) getActivity().findViewById(R.id.fragmentImageView);
 		fragmentTextView = (TextView) getActivity().findViewById(R.id.fragmentTextView);
-	}
 
-	// TODO: Rename method, update argument and hook method into UI event
-	public void onButtonPressed(Uri uri) {
-		if (mListener != null) {
-			mListener.onFragmentInteraction(uri);
+		if (savedInstanceState == null) {
+			// TODO
+		} else {
+			// do something with
+			//savedInstanceState.getString
 		}
 	}
 
@@ -74,6 +70,14 @@ public class MyFragment extends Fragment {
 		mListener = null;
 	}
 
+	public void setTextView(String str) {
+		if (str == null) {
+			// TODO
+		} else {
+			fragmentTextView.setText(str);
+		}
+	}
+
 	/**
 	 * This interface must be implemented by activities that contain this
 	 * fragment to allow an interaction in this fragment to be communicated
@@ -85,7 +89,6 @@ public class MyFragment extends Fragment {
 	 * >Communicating with Other Fragments</a> for more information.
 	 */
 	public interface OnFragmentInteractionListener {
-		// TODO: Update argument type and name
-		void onFragmentInteraction(Uri uri);
+		void onFragmentInteraction(String str);
 	}
 }
