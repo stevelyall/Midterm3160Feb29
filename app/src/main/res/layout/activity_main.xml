@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ca.stevenlyall.midterm3160feb29.MainActivity">
+    tools:context="ca.stevenlyall.midterm3160feb29.MainActivity"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,6 +15,14 @@
         android:gravity="center_horizontal"
         android:textSize="30sp"
         android:background="#558b2f"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"/>
-</RelativeLayout>
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:paddingBottom="10dp"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:name="ca.stevenlyall.midterm3160feb29.MyFragment"
+        android:id="@+id/myFragment"/>
+</LinearLayout>
